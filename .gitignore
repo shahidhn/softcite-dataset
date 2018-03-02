@@ -1,16 +1,1 @@
 .cache*
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-
-# intermediate markdown files.
-*.Rmd.bak
-*.nb.html
-
-# intermediate testing files
-full_dataset.ttl
-.Rproj.user
-softcite_assignments.csv
-
-# vim swap files
-*~
