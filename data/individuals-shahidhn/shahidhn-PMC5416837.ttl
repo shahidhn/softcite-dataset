@@ -1,0 +1,465 @@
+
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+@prefix pmcid: <https://www.ncbi.nlm.nih.gov/pmc/articles/> .
+@prefix pmcid-cited: <http://james.howison.name/ontologies/pmcid-journal-sample-citation#> .
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+# https://howisonlab.github.io/softcite-pdf-files/pdf-files/pmc_oa_files/PMC5416837.pdf
+pmcid:PMC5416837 rdf:type bioj:article ;
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:coded_no_in_text_mentions ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+
+
+    citec:has_in_text_mention pmcid:PMC5416837_SHN01 ;
+    citec:has_in_text_mention pmcid:PMC5416837_SHN02 ;
+    citec:has_in_text_mention pmcid:PMC5416837_SHN03 ;
+    citec:has_in_text_mention pmcid:PMC5416837_SHN04 ;
+    citec:has_in_text_mention pmcid:PMC5416837_SHN05 ;
+    citec:has_in_text_mention pmcid:PMC5416837_SHN06 ;
+    citec:has_in_text_mention pmcid:PMC5416837_SHN07 ;
+.
+pmcid:PMC5416837_SHN01 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """Indexed reads from Illumina sequencing were processed using cus- tom made Pipeline Analyzing RNA Editing RNA Sequenc- ing (PARERS) programming package.""" ; # use triple quotes
+
+    citec:on_pdf_page 4  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """Described as programming package.""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Pipeline Analyzing RNA Editing RNA Sequencing (PARERS)""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent false ; # true/false
+                           rdfs:label """Jason Carnes, Suzanne McDermott, Atashi Anupama, Brian G. Oliver, D. Noah Sather and Kenneth Stuart""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+pmcid:PMC5416837_SHN02 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """PARERS starts by identifying reads that a) contain exact string match for 12–15 nucleotides of primer sequence for each tar- geted transcript, and b) contain an exact string match be- tween the reverse complemented read with T nucleotides removed and the entire maxicircle reference sequence (GenBank M94286.1) with T nucleotides removed.""" ; # use triple quotes
+
+    citec:on_pdf_page 4  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software""" ; # put one in triple quotes
+                           ca:certainty 9 ; # integer
+                           ca:memo """Desribed as custom software.""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """PARERS""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Jason Carnes, Suzanne McDermott, Atashi Anupama, Brian G. Oliver, D. Noah Sather and Kenneth Stuart""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+pmcid:PMC5416837_SHN03 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """To analyse the resulting RNAseq data, we developed cus- tom software called PARERS (Pipeline Analyzing RNA Editing RNA Sequencing) that identi es and maps se- quences that may contain variable numbers of U nu- cleotides.""" ; # use triple quotes
+
+    citec:on_pdf_page 7  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software""" ; # put one in triple quotes
+                           ca:certainty 10; # integer
+                           ca:memo """Described as custom software.""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """PARERS (Pipeline Analyzing RNA Editing RNA Sequencing)""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Jason Carnes, Suzanne McDermott, Atashi Anupama, Brian G. Oliver, D. Noah Sather and Kenneth Stuart""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+pmcid:PMC5416837_SHN04 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """PARERS removes T nucleotides from each re- verse complement of the read sequence and performs an ex- act string match to the maxicircle reference sequence that has also had T nucleotides removed.""" ; # use triple quotes
+
+    citec:on_pdf_page 7  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """Described as custom software.""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """PARERS""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Jason Carnes, Suzanne McDermott, Atashi Anupama, Brian G. Oliver, D. Noah Sather and Kenneth Stuart""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+pmcid:PMC5416837_SHN05 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """After PARERS identi es and maps a read to the maxicircle target, subsequent string matches identify the original T-inclusive read sequence as a pre-edited, fully-edited, or partially edited sequence.""" ; # use triple quotes
+
+    citec:on_pdf_page 7  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """Desribed as custom software.""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """PARERS""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Jason Carnes, Suzanne McDermott, Atashi Anupama, Brian G. Oliver, D. Noah Sather and Kenneth Stuart""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+pmcid:PMC5416837_SHN06 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """Using PARERS, 11 344 810 reads (77.5% of indexed reads) were mapped to the maxicircle, which forms the dataset used in all subsequent analyses (Supplementary Table S1).""" ; # use triple quotes
+
+    citec:on_pdf_page 7  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """Desribed as custom software.""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """PARERS""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Jason Carnes, Suzanne McDermott, Atashi Anupama, Brian G. Oliver, D. Noah Sather and Kenneth Stuart""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+pmcid:PMC5416837_SHN07 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """These complexes had substantially altered editing both in vitro and in vivo. RNAseq analysis of pre-edited, edited, and partially edited mRNAs from these cells was performed us- ing PARERS, a custom editing analysis tool that we created to identify editing pro les that were characteristic of each cell line.""" ; # use triple quotes
+
+    citec:on_pdf_page 15  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software"""; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """Described as custom software.""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """PARERS""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Jason Carnes, Suzanne McDermott, Atashi Anupama, Brian G. Oliver, D. Noah Sather and Kenneth Stuart""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+# Jason Carnes, Suzanne McDermott, Atashi Anupama, Brian G. Oliver, D. Noah Sather and Kenneth Stuart
