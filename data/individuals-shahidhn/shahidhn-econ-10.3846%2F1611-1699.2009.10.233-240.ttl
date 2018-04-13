@@ -1,0 +1,232 @@
+
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+@prefix pmcid: <https://www.ncbi.nlm.nih.gov/pmc/articles/> .
+@prefix pmcid-cited: <http://james.howison.name/ontologies/pmcid-journal-sample-citation#> .
+@prefix doi: <http://doi.org/> .
+@prefix doi-cited: <http://james.howison.name/ontologies/doi-journal-sample-citation#> .
+
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+# https://github.com/howisonlab/softcite-pdf-files/blob/master/docs/pdf-files/economics_pdf_files/10.3846%252F1611-1699.2009.10.233-240.pdf
+# also https://doi.org/10.3846%2F1611-1699.2009.10.233-240
+doi:10.3846%2F1611-1699.2009.10.233-240 rdf:type bioj:article ;
+    rdf:type bioj:econ_article ;
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:codable ;
+                           citec:isPresent true; # true if can code
+                         ] ;
+        ] ;
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:standard_type ;
+                           citec:isPresent true ; # true if standard article
+                         ] ;
+        ] ;
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:coded_no_in_text_mentions ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+
+
+    citec:has_in_text_mention doi:10.3846%2F1611-1699.2009.10.233-240_SHN01 ;
+    citec:has_in_text_mention doi:10.3846%2F1611-1699.2009.10.233-240_SHN02 ;
+    # create name for in_text_mention like
+    # doi:10.3846%2F1611-1699.2009.10.233-240_JH01
+
+    # citations like:
+    # doi-cited:10.3846%2F1611-1699.2009.10.233-240_AuthorYear
+.
+doi:10.3846%2F1611-1699.2009.10.233-240_SHN01 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """Weka data mining software (Witten and Frank 2005) will be utilized to develop neural networks, decision trees and logistic regression credit scoring models.""" ; # use triple quotes
+
+    citec:on_pdf_page 5  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software""" ; # put one in triple quotes
+                           ca:certainty 9 ; # integer
+                           ca:memo """Described as software in paper""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Weka""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    citec:has_reference doi-cited:10.3846%2F1611-1699.2009.10.233-240_Witten-2005 ; # name reference like doi-cited:a2004-40-NAT_GENET_Author-YYYY, no quotes
+.
+doi-cited:10.3846%2F1611-1699.2009.10.233-240_Witten-2005 rdf:type citec:reference ;
+    citec:full_quote """Witten, I. H.; Frank, E. 2005. Data Mining: Practical Ma- chine Learning Tools and Techniques. Second edition. San Francisco, CA: Morgan Kaufmann.""" ; # use triple quotes
+
+    citec:on_pdf_page 9  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:reference_type ;
+                           rdfs:label """publication""" ; # put one in triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """2005""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Witten, I. H.; Frank, E.""" ; # use triple quotes
+                         ] ;
+        ] ;
+.
+doi:10.3846%2F1611-1699.2009.10.233-240_SHN02 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """The discriminant analysis credit scoring models will be im- plemented by using SPSS 13.0""" ; # use triple quotes
+
+    citec:on_pdf_page 5  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software""" ; # put one in triple quotes
+                           ca:certainty 9 ; # integer
+                           ca:memo """Searched on Google""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """SPSS""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """13.0""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "shahidhn" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+.
