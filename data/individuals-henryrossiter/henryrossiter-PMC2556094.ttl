@@ -15,84 +15,24 @@
 @prefix pmcid-cited: <http://james.howison.name/ontologies/pmcid-journal-sample-citation#> .
 @prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
 
-# https://howisonlab.github.io/softcite-pdf-files/pdf-files/2000-22-AM_J_BOT.pdf
-pmcid:2000-22-AM_J_BOT rdf:type bioj:article ;
-    citec:has_in_text_mention 2000-22-AM_J_BOT_SHN01 ;
-    citec:has_in_text_mention 2000-22-AM_J_BOT_SHN02 ;
-    citec:has_in_text_mention 2000-22-AM_J_BOT_SHN03 ;
-    citec:has_in_text_mention 2000-22-AM_J_BOT_SHN04 ;
+# https://howisonlab.github.io/softcite-pdf-files/pdf-files/pmc_oa_files/PMC2556094.pdf
+pmcid:PMC2556094 rdf:type bioj:article ;
 
-      ca:isTargetOf
-          [ rdf:type ca:CodeApplication ;
-            ca:hasCoder "shahidhn" ;
-            ca:appliesCode [ rdf:type citec:coded_no_in_text_mentions ;
-                             citec:isPresent false; # true/false
-                           ] ;
-          ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:coded_no_in_text_mentions ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+
+
+    citec:has_in_text_mention pmcid:PMC2556094_HR01 ; # name in text mention like pmcid:PMC3028497_JC01, no quotes
+    citec:has_in_text_mention pmcid:PMC2556094_HR02 ; # name in text mention like pmcid:PMC3028497_JC01, no quotes
+    citec:has_in_text_mention pmcid:PMC2556094_HR03 ; # name in text mention like pmcid:PMC3028497_JC01, no quotes
 .
-pmcid:2000-22-AM_J_BOT_SHN01 rdf:type citec:in_text_mention ; # use in text mention name
-    citec:full_quote '''We  used  Detrended  Corre-spondence Analysis in PC-ORD (McCune, 1993) to depict multivariatechanges in dominance of species neighborhoods for each focal speciesin recently burned and long-unburned sites.''' ; # use triple quotes
-
-    citec:on_pdf_page 4 ; # integer
-
-    citec:spans_pages false ; # true/false
-
-    ca:isTargetOf
-        [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:mention_type ;
-                           rdfs:label '''software''' ; # put one in triple quotes
-                           ca:certainty 6 ; # integer
-                           ca:memo '''Found on Google.''' ; # use triple quotes
-                         ] ;
-        ] ;
-    ca:isTargetOf
-        [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:software_was_used ;
-                           citec:isPresent true; # true/false
-                         ] ;
-        ] ;
-    ca:isTargetOf
-        [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:software_name ;
-                           citec:isPresent true ; # true/false
-                           rdfs:label '''PC-ORD''' ; # use triple quotes
-                         ] ;
-        ] ;
-    ca:isTargetOf
-        [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:version_number ;
-                           citec:isPresent false ; # true/false
-                         ] ;
-        ] ;
-    ca:isTargetOf
-        [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:version_date ;
-                           citec:isPresent false ; # true/false
-                         ] ;
-        ] ;
-    ca:isTargetOf
-        [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:url ;
-                           citec:isPresent false ; # true/false
-                         ] ;
-        ] ;
-    ca:isTargetOf
-        [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:creator ;
-                           citec:isPresent false ; # true/false
-                         ] ;
-        ] ;
-    citec:has_reference pmcid-cited:2000-22-AM_J_BOT-McCune-1993 ; # name reference like pmcid-cited:a2004-40-NAT_GENET_Author-YYYY, no quotes
-.
-pmcid-cited:2000-22-AM_J_BOT-McCune-1993 rdf:type citec:reference ;
-    citec:full_quote '''MCCUNE,  B.   1993.   Multivariate  analysis  on  the  PC-ORD  system.Oregon State University, Corvallis, Oregon. USA.''' ; # use triple quotes
+pmcid:PMC2556094_HR01 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """and processed by using MOSFLM (Leslie, 1995""" ; # use triple quotes
 
     citec:on_pdf_page 9  ; # integer
 
@@ -100,230 +40,336 @@ pmcid-cited:2000-22-AM_J_BOT-McCune-1993 rdf:type citec:reference ;
 
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software"""; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled it.""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent true; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """MOSFLM""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    citec:has_reference pmcid-cited:PMC2556094_Leslie-1995 ; # name reference like pmcid-cited:a2004-40-NAT_GENET_Author-YYYY, no quotes
+.
+pmcid-cited:PMC2556094_Leslie-1995 rdf:type citec:reference ;
+    citec:full_quote """Leslie  AGW  (1995)MOSFLM Users Guide.  Cambridge,  UK:  MRCLaboratory of Molecular Biology""" ; # use triple quotes
+
+    citec:on_pdf_page 10  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:reference_type ;
-                           rdfs:label '''publication''' ; # put one in triple quotes
+                           rdfs:label """user_guide""" ; # put one in triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:software_name ;
                            citec:isPresent true ; # true/false
-                           rdfs:label '''PC-ORD''' ; # use triple quotes
+                           rdfs:label """MOSFLM""" ; # use triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:version_number ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:version_date ;
                            citec:isPresent true ; # true/false
-                           rdfs:label '''1993.''' ;
+                           rdfs:label """1995""" ; # use triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:url ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:creator ;
-                           citec:isPresent true ; # true/false
-                           rdfs:label '''MCCUNE,  B. ''' ; # use triple quotes
+                           citec:isPresent false ; # true/false
+                           rdfs:label """MRCLaboratory of Molecular Biology""" ; # use triple quotes
                          ] ;
         ] ;
 .
+pmcid:PMC2556094_HR02 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """and refined with CNS in PHENIX(Adamset al,  2002),  using  NCS  restraints""" ; # use triple quotes
 
-pmcid:2000-22-AM_J_BOT_SHN02 rdf:type citec:in_text_mention ; # use in text mention name
-    citec:full_quote '''There were significant effects of study site and focal species on scores of the first axes of the neighbor floristic gradients detected by DECORANA ordination (eigenval- ue 0.817, N   294; Table 5).''' ; # use triple quotes
-
-    citec:on_pdf_page 7  ; # integer
+    citec:on_pdf_page 9  ; # integer
 
     citec:spans_pages false ; # true/false
 
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:mention_type ;
-                           rdfs:label '''software''' ; # put one in triple quotes
-                           ca:certainty 8 ; # integer
-                           ca:memo '''Detrended correspondence analysis (DCA) is a multivariate statistical technique widely used by ecologists... implemented in FORTRAN code package called DECORANA.''' ; # use triple quotes
+                           rdfs:label """software"""; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """coded this before - it is asoftware suite.""" ; # use triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:software_was_used ;
                            citec:isPresent true; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:software_name ;
                            citec:isPresent true ; # true/false
-                           rdfs:label '''DECORANA''' ; # use triple quotes
+                           rdfs:label """PHENIX""" ; # use triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:version_number ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:version_date ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:url ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:creator ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
+    citec:has_reference pmcid-cited:PMC2556094_Adams-2002 ; # name reference like pmcid-cited:a2004-40-NAT_GENET_Author-YYYY, no quotes
 .
+pmcid-cited:PMC2556094_Adams-2002 rdf:type citec:reference ;
+    citec:full_quote """Adams PD, Grosse-Kunstleve RW, Hung LW, Ioerger TR, McCoy AJ,Moriarty NW, Read RJ, Sacchettini JC, Sauter NK, Terwilliger TC(2002)  PHENIX:  building  new  software  for  automated  crystal-lographic   structure   determination.Acta  Crystallogr  D  BiolCrystallogr58:1948–1954""" ; # use triple quotes
 
-pmcid:2000-22-AM_J_BOT_SHN03 rdf:type citec:in_text_mention ; # use in text mention name
-    citec:full_quote '''Results of analysis of variance of the effects of focal species, removal treatment, and study site on scores of the first axes of the neighbor floristic gradients detected by DECORANA ordination.''' ; # use triple quotes
-
-    citec:on_pdf_page 7  ; # integer
+    citec:on_pdf_page 9  ; # integer
 
     citec:spans_pages false ; # true/false
 
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:mention_type ;
-                           rdfs:label '''software''' ; # put one in triple quotes
-                           ca:certainty 8 ; # integer
-                           ca:memo '''Detrended correspondence analysis (DCA) is a multivariate statistical technique widely used by ecologists... implemented in FORTRAN code package called DECORANA.''' ; # use triple quotes
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:reference_type ;
+                           rdfs:label """publication""" ; # put one in triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:software_name ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """PHENIX""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:version_number ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:version_date ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """2002""" ;
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:url ;
+                           citec:isPresent false ; # true/false
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:creator ;
+                           citec:isPresent true ; # true/false
+                           rdfs:label """Adams PD, Grosse-Kunstleve RW, Hung LW, Ioerger TR, McCoy AJ,Moriarty NW, Read RJ, Sacchettini JC, Sauter NK, Terwilliger TC"""
+                         ] ;
+        ] ;
+.
+pmcid:PMC2556094_HR03 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """ and theCCP4 package (CCP4, 1994)""" ; # use triple quotes
+
+    citec:on_pdf_page 9  ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """software"""; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """it is a software package""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:software_was_used ;
                            citec:isPresent true; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:software_name ;
                            citec:isPresent true ; # true/false
-                           rdfs:label '''DECORANA''' ; # use triple quotes
+                           rdfs:label """CCP4""" ; # use triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:version_number ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:version_date ;
-                           citec:isPresent false ; # true/false
+                           citec:isPresent true ; # true/false
+                           rdfs:label """1994""" ; # use triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:url ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:creator ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
+    citec:has_reference pmcid-cited:PMC2556094_CCP4-1994 ; # name reference like pmcid-cited:a2004-40-NAT_GENET_Author-YYYY, no quotes
 .
-pmcid:2000-22-AM_J_BOT_SHN04 rdf:type citec:in_text_mention ; # use in text mention name
-    citec:full_quote '''Plot of the first two axes of a DECORANA ordination of species’ neighborhoods for the three focal species (E. cuneifolium, H. cumulicola, and P. basiramia; shown by small symbols).''' ; # use triple quotes
+pmcid-cited:PMC2556094_CCP4-1994 rdf:type citec:reference ;
+    citec:full_quote """CCP4 (1994) Programs for protein crystallography.Acta CrystallogrD Biol Crystallogr50:760–763""" ; # use triple quotes
 
-    citec:on_pdf_page 7  ; # integer
+    citec:on_pdf_page 9  ; # integer
 
     citec:spans_pages false ; # true/false
 
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:mention_type ;
-                           rdfs:label '''software''' ; # put one in triple quotes
-                           ca:certainty 8 ; # integer
-                           ca:memo '''Detrended correspondence analysis (DCA) is a multivariate statistical technique widely used by ecologists... implemented in FORTRAN code package called DECORANA.''' ; # use triple quotes
+          ca:hasCoder "henryrossiter" ;
+          ca:appliesCode [ rdf:type citec:reference_type ;
+                           rdfs:label """publication""" ; # put one in triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
-          ca:appliesCode [ rdf:type citec:software_was_used ;
-                           citec:isPresent true; # true/false
-                         ] ;
-        ] ;
-    ca:isTargetOf
-        [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:software_name ;
                            citec:isPresent true ; # true/false
-                           rdfs:label '''DECORANA''' ; # use triple quotes
+                           rdfs:label """CCP4""" ; # use triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:version_number ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:version_date ;
-                           citec:isPresent false ; # true/false
+                           citec:isPresent true ; # true/false
+                           rdfs:label """1994""" ; # use triple quotes
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:url ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
     ca:isTargetOf
         [ rdf:type ca:CodeApplication ;
-          ca:hasCoder "shahidhn" ;
+          ca:hasCoder "henryrossiter" ;
           ca:appliesCode [ rdf:type citec:creator ;
                            citec:isPresent false ; # true/false
                          ] ;
         ] ;
 .
-#Use snippets to code the article. itb will paste an in-text mention block. refb will paste a reference block.
